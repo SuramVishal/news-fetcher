@@ -1,0 +1,60 @@
+*****Developers********
+CSE 2013-2017 NIT Warangal
+S.Vishal Reddy 
+Khativarapu Bharghav
+Vishal Maldoddi
+Prashanth Reddy
+*****Objective*********
+-------------------------------------------------------------
+Fetch relavent news articles based on keywords
+Mainly used by alumni to know news about other Alumni of their institute
+------------------------------------------------------------
+******Approach***********
+------------------------------------------------------------
+Fetch news articles from rss feeds of some website every day 
+at a particular time and store them in a database.
+
+The user will give keywords as input in a website and corresponding news 
+articles are displayed on web page.
+-------------------------------------------------------------
+*********Softwares to be installed************
+--------------------------------------------------------------
+1.Python 2.7 (sudo apt-get install python)	
+2.requests	(sudo apt-get install python-requests)
+3.beautiful soup (sudo apt-get install python-bs4)
+4.feedparser	(sudo apt-get install python-feedparser)
+
+*********Python Web framework used************
+--------------------------------------------------------------
+1.Flask	
+---------------------------------------------------------------
+*****Basic steps involved in the program********
+--------------------------------------------------------------
+-->fetch.py
+
+step 1:
+open input.txt(which contains the list of url of rss feed of news websites).
+fetch the url from input.txt
+
+step 2:
+For each url fetched 
+	set date to current date
+	fetch all items with current date as timestamp
+for each item
+	write the  timestamp,title 
+	get actual url link from feed and scarpe it
+	write the matter from url link to file
+
+Now we have the articles fetched into the feeds.db file.
+
+********AlchemyAPI used to further filter down the articles by taking keywords as input**********
+
+--------------------------------------------------------------
+
+******** Steps to run the localhost *************
+--> Goto the current directory in terminal
+-->Type in the command "./run.py" in the terminal. (No need to give the python command as the flask has local python lib)
+-->Open Browser and the link "127.0.0.1:5000/takeinput"
+-->Type in the keywords seperated by comma 
+-->The articles in the feeds.db are analysed for keywords and are sentimentally analized too.
+-->And the output being the final relevant articles.  

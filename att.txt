@@ -1,0 +1,6 @@
+hindu.com p class body
+cnn p class zn-body__paragraph
+ycombinator p
+economictimes div class section1
+yourstory div class ys_post_content text
+techcrunch p

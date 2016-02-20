@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    <ul>
+       {% for con in data %}
+       {% if con: %}
+       <li>{{con}}</li>
+       {% endif %}
+       {% endfor %}
+    </ul>
+    
+{% endblock %}
+
